@@ -12,6 +12,9 @@ export 'tasks_completed_model.dart';
 class TasksCompletedWidget extends StatefulWidget {
   const TasksCompletedWidget({super.key});
 
+  static String routeName = 'tasksCompleted';
+  static String routePath = '/tasksCompleted';
+
   @override
   State<TasksCompletedWidget> createState() => _TasksCompletedWidgetState();
 }
@@ -60,7 +63,7 @@ class _TasksCompletedWidgetState extends State<TasksCompletedWidget> {
                   },
                   child: Padding(
                     padding: MediaQuery.viewInsetsOf(context),
-                    child: const AddTaskWidget(),
+                    child: AddTaskWidget(),
                   ),
                 );
               },
@@ -77,7 +80,7 @@ class _TasksCompletedWidgetState extends State<TasksCompletedWidget> {
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsets.all(24.0),
+            padding: EdgeInsets.all(24.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -122,7 +125,7 @@ class _TasksCompletedWidgetState extends State<TasksCompletedWidget> {
                       shrinkWrap: true,
                       scrollDirection: Axis.vertical,
                       itemCount: listViewTasksRecordList.length,
-                      separatorBuilder: (_, __) => const SizedBox(height: 15.0),
+                      separatorBuilder: (_, __) => SizedBox(height: 15.0),
                       itemBuilder: (context, listViewIndex) {
                         final listViewTasksRecord =
                             listViewTasksRecordList[listViewIndex];
@@ -136,7 +139,7 @@ class _TasksCompletedWidgetState extends State<TasksCompletedWidget> {
                     );
                   },
                 ),
-              ].divide(const SizedBox(height: 15.0)),
+              ].divide(SizedBox(height: 15.0)),
             ),
           ),
         ),

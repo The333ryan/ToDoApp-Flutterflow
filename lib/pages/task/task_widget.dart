@@ -50,7 +50,7 @@ class _TaskWidgetState extends State<TaskWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+      padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
       child: Container(
         width: MediaQuery.sizeOf(context).width * 1.0,
         height: 40.0,
@@ -61,7 +61,7 @@ class _TaskWidgetState extends State<TaskWidget> {
             color: FlutterFlowTheme.of(context).primaryText,
           ),
         ),
-        alignment: const AlignmentDirectional(-1.0, 0.0),
+        alignment: AlignmentDirectional(-1.0, 0.0),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           children: [

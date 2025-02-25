@@ -8,6 +8,9 @@ export 'profile_model.dart';
 class ProfileWidget extends StatefulWidget {
   const ProfileWidget({super.key});
 
+  static String routeName = 'profile';
+  static String routePath = '/profile';
+
   @override
   State<ProfileWidget> createState() => _ProfileWidgetState();
 }
@@ -54,11 +57,11 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 2.0,
         ),
-        body: const SafeArea(
+        body: SafeArea(
           top: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,

@@ -18,6 +18,9 @@ class TaskdetailsWidget extends StatefulWidget {
   /// the whole docuent
   final TasksRecord? taskDoc;
 
+  static String routeName = 'taskdetails';
+  static String routePath = '/taskdetails';
+
   @override
   State<TaskdetailsWidget> createState() => _TaskdetailsWidgetState();
 }
@@ -69,9 +72,9 @@ class _TaskdetailsWidgetState extends State<TaskdetailsWidget> {
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: const AlignmentDirectional(0.0, 0.0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: Padding(
-              padding: const EdgeInsets.all(24.0),
+              padding: EdgeInsets.all(24.0),
               child: Container(
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).primaryBackground,
@@ -81,7 +84,7 @@ class _TaskdetailsWidgetState extends State<TaskdetailsWidget> {
                   ),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: EdgeInsets.all(16.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -126,7 +129,7 @@ class _TaskdetailsWidgetState extends State<TaskdetailsWidget> {
                                 ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Text(
                           'Created ${valueOrDefault<String>(
                             dateTimeFormat(
@@ -141,7 +144,7 @@ class _TaskdetailsWidgetState extends State<TaskdetailsWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(-1.0, 0.0),
+                        alignment: AlignmentDirectional(-1.0, 0.0),
                         child: Text(
                           'Task',
                           style:
@@ -151,7 +154,7 @@ class _TaskdetailsWidgetState extends State<TaskdetailsWidget> {
                                   ),
                         ),
                       ),
-                      SizedBox(
+                      Container(
                         width: double.infinity,
                         child: TextFormField(
                           controller: _model.titleInputTextController,
@@ -175,14 +178,14 @@ class _TaskdetailsWidgetState extends State<TaskdetailsWidget> {
                                   letterSpacing: 0.0,
                                 ),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
@@ -204,7 +207,7 @@ class _TaskdetailsWidgetState extends State<TaskdetailsWidget> {
                             ),
                             filled: _model.editingMode,
                             fillColor: _model.editingMode
-                                ? const Color(0xFF909090)
+                                ? Color(0xFF909090)
                                 : FlutterFlowTheme.of(context)
                                     .secondaryBackground,
                           ),
@@ -219,7 +222,7 @@ class _TaskdetailsWidgetState extends State<TaskdetailsWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(-1.0, 0.0),
+                        alignment: AlignmentDirectional(-1.0, 0.0),
                         child: Text(
                           'Details',
                           style:
@@ -229,7 +232,7 @@ class _TaskdetailsWidgetState extends State<TaskdetailsWidget> {
                                   ),
                         ),
                       ),
-                      SizedBox(
+                      Container(
                         width: double.infinity,
                         child: TextFormField(
                           controller: _model.dtlInputTextController,
@@ -253,14 +256,14 @@ class _TaskdetailsWidgetState extends State<TaskdetailsWidget> {
                                   letterSpacing: 0.0,
                                 ),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(
+                              borderSide: BorderSide(
                                 color: Color(0x00000000),
                                 width: 1.0,
                               ),
@@ -282,7 +285,7 @@ class _TaskdetailsWidgetState extends State<TaskdetailsWidget> {
                             ),
                             filled: true,
                             fillColor: _model.editingMode
-                                ? const Color(0xFF909090)
+                                ? Color(0xFF909090)
                                 : FlutterFlowTheme.of(context)
                                     .secondaryBackground,
                           ),
@@ -322,9 +325,9 @@ class _TaskdetailsWidgetState extends State<TaskdetailsWidget> {
                         options: FFButtonOptions(
                           width: double.infinity,
                           height: 40.0,
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 16.0, 0.0),
-                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).primary,
                           textStyle:
@@ -341,7 +344,7 @@ class _TaskdetailsWidgetState extends State<TaskdetailsWidget> {
                           borderRadius: BorderRadius.circular(16.0),
                         ),
                       ),
-                    ].divide(const SizedBox(height: 15.0)),
+                    ].divide(SizedBox(height: 15.0)),
                   ),
                 ),
               ),
