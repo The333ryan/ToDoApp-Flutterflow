@@ -8,6 +8,9 @@ export 'addtask_model.dart';
 class AddtaskWidget extends StatefulWidget {
   const AddtaskWidget({super.key});
 
+  static String routeName = 'Addtask';
+  static String routePath = '/addtask';
+
   @override
   State<AddtaskWidget> createState() => _AddtaskWidgetState();
 }
